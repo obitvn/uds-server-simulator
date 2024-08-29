@@ -25,6 +25,22 @@ cd ./uds-server-simulator
 make
 ```
 
+Testing on a virtual CAN interface
+----------------------------------
+You can run the following commands to setup a virtual can interface
+
+```
+  sudo modprobe can
+  sudo modprobe vcan
+  sudo ip link add dev vcan0 type vcan
+  sudo ip link set up vcan0
+  ./uds-server-simulator vcan0
+
+```
+
+If you type ifconfig vcan0 you should see a vcan0 interface. A setup_vcan.sh file has also been provided with this
+repo.
+
 ## Configration file
 The file `config.json` defines every ECU's information which needs to be initialized.
 
