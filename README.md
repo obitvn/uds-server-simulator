@@ -35,6 +35,7 @@ You can run the following commands to setup a virtual can interface
   sudo ip link add dev vcan0 type vcan
   sudo ip link set up vcan0
   ./uds-server-simulator vcan0
+  caringcaribou -i vcan0 uds auto
 
 ```
 
